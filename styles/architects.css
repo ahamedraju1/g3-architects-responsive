@@ -44,6 +44,10 @@ main{
 main >section{
     margin-top: 130px;
 }
+.section-title{
+    font-size: 2.8rem;
+    font-weight: 700;
+}
  /* header styles */
 
   /* navbar related styles */
@@ -87,7 +91,6 @@ main >section{
 /* team and feature styles */
 .teams{
     align-items: center;
-     
 }
 .team-img-container{
     display: grid;
@@ -96,8 +99,12 @@ main >section{
 }
 .team-feature{
     margin-left: 70px;
+    max-width: 540px;
 }
-.quick-title{
+.feature-title{
+    margin-bottom: 24px;
+}
+#quick-title{
     font-size: 2.8rem;
     font-weight: 500;
 }
@@ -110,11 +117,32 @@ main >section{
     font-weight: 700;
     color: #FF900E;
 }
+.feature-description{
+    margin-bottom: 32px;
+}
+
 /* responsive styles */
 /* small devices */
 @media screen and (max-width:576px) {
     .navbar,
-    .nav-links{
+    .nav-links,
+    .teams  {
         flex-direction: column;
     }
+    .team-img-container{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .team-feature{
+        margin-left: 20px;
+    }
+}
+/* medium devices */
+@media screen and (min-width:576px) and (max-width:992px) {
+    .teams{
+        flex-direction: column;
+    }
+    .team-feature{
+        margin: 50px auto;
+    }
+    
 }
